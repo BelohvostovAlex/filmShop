@@ -1,11 +1,23 @@
 const initialState = {
-    films: []
+    films: [
+        {
+            id: 0,
+            title: 'Batman'
+        }
+    ],
+    ids: []
 }
 
-export default (state, action) => {
+function filmReducer (state = initialState, action) {
     switch(action.type) {
+        case 'SET_FILM': 
+        return {
+            ...state,
+            films: action.payload
+        }
         case 'ADD_FILM': 
          return {
+             ...state,
              films: [
                  ...state.films,
                  action.payload
@@ -15,3 +27,5 @@ export default (state, action) => {
             return state
     }
 }
+
+export default filmReducer

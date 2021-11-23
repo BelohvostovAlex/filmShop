@@ -1,5 +1,8 @@
 import React from "react";
 
+
+import './store'
+
 function App() {
   return (
     <div className="container">

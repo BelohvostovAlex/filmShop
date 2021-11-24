@@ -1,22 +1,25 @@
 import React from "react";
 import { connect } from 'react-redux'
 import setFilms from './actions/films'
+import Card from "./components/Card";
 
+import './style.scss'
 
-class App extends React.Component {
-  render() {
-    const { films } = this.props
+function App () {
+
     return (
-      <ul>
-      {
-        films.map(film => (
-          <li>{film.title}</li>
-        ))
-      }
-    </ul>
+     <div className="wrapper">
+       <h1>FILMS</h1>
+       <div className="cards">
+        {[1,2,3,4,5].map((item,i) => {
+          return <Card key={i}/>
+        })}
+         
+       </div>
+     </div>
     )
   }
-}
+
 
 const mapStateToProps = ({films}) => {
   return {

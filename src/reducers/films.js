@@ -1,11 +1,6 @@
 const initialState = {
-    films: [
-        {
-            id: 0,
-            title: 'Batman'
-        }
-    ],
-    ids: []
+    isLoading: false,
+    items: null,
 }
 
 function filmReducer (state = initialState, action) {
@@ -13,16 +8,14 @@ function filmReducer (state = initialState, action) {
         case 'SET_FILM': 
         return {
             ...state,
-            films: action.payload
+            items: action.payload,
+            isLoading: true,
         }
-        case 'ADD_FILM': 
-         return {
-             ...state,
-             films: [
-                 ...state.films,
-                 action.payload
-             ]
-        }
+        case 'SET_IS_LOADING':
+            return {
+                ...state,
+                isLoading: action.payload
+            }
         default:
             return state
     }

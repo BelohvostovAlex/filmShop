@@ -1,0 +1,81 @@
+{
+    "films": [
+        {
+            "id": 0,
+            "title": "Dune",
+            "descr": "Dune (titled onscreen as Dune: Part One) is a 2021 American epic science fiction film.",
+            "genre": "Thriller",
+            "year": 2021,
+            "director": "Denis Villeneuve",
+            "image": "",
+            "price": 10,
+            "rating": 9
+        },
+        {
+            "id": 1,
+            "title": "Ghostbusters: Afterlife",
+            "descr": "A third Ghostbusters film had been in various stages of development since Ghostbusters II was released in 1989, stalling as Murray refused to commit to the project. ",
+            "genre": "Thriller",
+            "year": 2021,
+            "director": "Jason Reitman",
+            "image": "",
+            "price": 12,
+            "rating": 6
+        },
+        {
+            "id": 2,
+            "title": "Eternals",
+            "descr": "Eternals is a 2021 American superhero film based on the Marvel Comics race of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 26th film in the Marvel Cinematic Universe (MCU).",
+            "genre": "Thriller",
+            "year": 2021,
+            "director": "Chloé Zhao",
+            "image": "",
+            "price": 10,
+            "rating": 2
+        },
+        {
+            "id": 3,
+            "title": "Joker",
+            "descr": "The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker and provides a possible origin story for the character.",
+            "genre": "Thriller",
+            "year": 2019,
+            "director": "Todd Phillips",
+            "image": "",
+            "price": 7,
+            "rating": 8
+        },
+        {
+            "id": 4,
+            "title": "The Dark Knight",
+            "descr": "Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman.",
+            "genre": "Thriller",
+            "year": 2008,
+            "director": "Christopher Nolan",
+            "image": "",
+            "price": 11,
+            "rating": 10
+        },
+        {
+            "id": 5,
+            "title": "Interstellar ",
+            "descr": "Set in a dystopian future where humanity is struggling to survive, the film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for humanity.",
+            "genre": "Thriller",
+            "year": 2014,
+            "director": "Christopher Nolan",
+            "image": "",
+            "price": 12,
+            "rating": 9
+        },
+        {
+            "id": 6,
+            "title": "The last duel",
+            "descr": "Set in medieval France, the film stars Damon as Jean de Carrouges, a knight who challenges his friend, squire Jacques Le Gris (Adam Driver) to a judicial duel after Jean's wife, Marguerite (Jodie Comer), accuses Jacques of raping her.",
+            "genre": "Thriller",
+            "year": 2021,
+            "director": "Ridley Scott",
+            "image": "",
+            "price": 14,
+            "rating": 7
+        }
+    ]
+}

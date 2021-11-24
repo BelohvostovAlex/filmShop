@@ -2,29 +2,25 @@ import React from "react";
 import { connect } from 'react-redux'
 import setFilms from './actions/films'
 
+
 class App extends React.Component {
   render() {
-    const {films} = this.props.films
-    console.log(films)
-    const {setFilms} = this.props
-    const newFilms = [
-      {
-        id: 0,
-        title: "Superman"
-      }
-    ]
+    const { films } = this.props
     return (
-    <div className="container">
-      <h1>{films[0].title}</h1>
-      <button onClick={setFilms.bind(this, newFilms)}>Click</button>
-    </div>
-  );
-    }
+      <ul>
+      {
+        films.map(film => (
+          <li>{film.title}</li>
+        ))
+      }
+    </ul>
+    )
+  }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({films}) => {
   return {
-    ...state
+    films: films.items
   }
 }
 

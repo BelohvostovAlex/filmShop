@@ -62,9 +62,9 @@ function Card( {id,title,descr,genre,stars,year,country,director,time,awards,ima
 
           <div className="card-text">
             {activeInfo ? (
-              <p>{`The film was directed by ${director}, in ${year}. The country of production is ${[...country]}, the duration of the film is ${time} min`}</p>
+              <p>{`The film was directed by ${director}, in ${year}. The country of production is ${country.split(',')}, the duration of the film is ${time} min`}</p>
             ) : activeActor ? (
-              <p>{stars.map((item,index) => <span key={index}>{item}</span>)}</p>
+              <p>{stars.map((item,index) => <span key={index}>[{item}] </span>)}</p>
             ) : (
               <p>
                {awards}

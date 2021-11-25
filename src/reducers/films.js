@@ -1,5 +1,5 @@
 const initialState = {
-    isLoading: false,
+    isReady: false,
     items: null,
 }
 
@@ -9,12 +9,12 @@ function filmReducer (state = initialState, action) {
         return {
             ...state,
             items: action.payload,
-            isLoading: true,
+            isReady: true,
         }
         case 'SET_IS_LOADING':
             return {
                 ...state,
-                isLoading: action.payload
+                isReady: action.payload
             }
         default:
             return state

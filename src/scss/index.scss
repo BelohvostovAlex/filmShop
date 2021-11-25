@@ -1,0 +1,32 @@
+@import './components/card';
+@import './variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(7, 4, 4);
+}
+
+button {
+    border: none;
+    font-size: inherit;
+}
+
+.wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

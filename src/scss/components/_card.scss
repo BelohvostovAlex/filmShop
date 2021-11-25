@@ -1,39 +1,11 @@
-* {
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-}
-$main-color: #ffa001;
-$grey-color: rgb(190, 190, 190);
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: rgb(7, 4, 4);
-}
-
-button {
-    border: none;
-    font-size: inherit;
-}
-
-.wrapper {
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
+@import '../variables';
 
 .card {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     width: 280px;
+    height: 690px;
     margin-right: 20px;
     margin-bottom: 40px;
     position: relative;
@@ -49,17 +21,14 @@ button {
     }
 
     &:hover .card-inner{
-        transform: translateY(-190px);
+        transform: translateY(-150px);
     }
+    
 
-    img {
-        width: 100%;
-        height: auto;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
+
 
     &-inner {
+        min-height: 150px;
         background-color: black;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -68,6 +37,18 @@ button {
         cursor: pointer;
         transition: .3s all ease-in-out;
         transition-delay: .2s;
+
+        img {
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+    &-top {
+        background-color: black;
     }
     &-title {
         font-size: 14px;
@@ -76,6 +57,24 @@ button {
         padding-bottom: 5px;
         margin: 10px 0px;
     }
+
+    &-genre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        span {
+            text-transform: capitalize;
+            border: 1px solid $grey-color;
+            border-radius: 10px;
+            color: $main-color;
+            opacity: .7;
+            padding: 2px 6px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
     &-description {
         font-size: 12px;
         text-align: start;
@@ -88,6 +87,7 @@ button {
         margin-bottom: 10px;
         text-align: start;
         font-size: 12px;
+        background-color: black;
         color: $grey-color;
         p {
             padding: 5px;
@@ -105,7 +105,8 @@ button {
     .card-accor_block {
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
+        background-color: black;
     }
 
     .card-accor_title {
@@ -134,7 +135,15 @@ button {
 
     .card-bottom {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        color: white;
+        z-index: 1;
+        .card-bottom_block {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 5px;
+        }
         .rating {
             display: flex;
             align-items: center;
@@ -162,11 +171,18 @@ button {
         width: 100%;
         padding: 10px;
         border-radius: 10px;
-        margin: 10px auto;
+        margin-bottom: 5px;
         cursor: pointer;
         transition: 0.2s all ease-in-out;
         &:hover {
             background-color: darken($main-color, 10%);
         }
     }
+}
+
+.cardwrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

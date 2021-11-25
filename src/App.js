@@ -1,18 +1,29 @@
 import React from "react";
-import { connect } from 'react-redux'
+import { connect, useSelector, useDispatch } from 'react-redux'
+import axios from "axios";
+
 import setFilms from './actions/films'
 import Card from "./components/Card";
 
-import './style.scss'
+import './scss/index.scss'
 
 function App () {
+  const filmsAll = useSelector(({films}) => films.items)
+  const dispatch = useDispatch()
+
+  React.useEffect(() => {
+    axios.get('/films.json')
+    .then(({data}) => dispatch(setFilms(data.films)))
+  }, [])
 
     return (
      <div className="wrapper">
        <h1>FILMS</h1>
        <div className="cards">
-        {[1,2,3,4,5].map((item,i) => {
-          return <Card key={i}/>
+        {[].map((item,i) => {
+          return <Card 
+                  key={i}
+                  {...item}/>
         })}
          
        </div>
@@ -34,3 +45,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);
+

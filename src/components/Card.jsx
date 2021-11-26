@@ -23,12 +23,17 @@ function Card( {id,title,descr,genre,stars,year,country,director,time,awards,ima
 
   return (
     <div className="card">
+      <div className="card-img">
+      <div className="rating">
+            <span>{rating}</span>
+            <img src="./img/star.png" alt="star" />
+      </div>
       <img
+        className="cardImage"
         src={image}
         alt={title}
-        height={400}
-        width={258}
       />
+      </div>
       <div className="cardwrapper">
       <div className="card-inner">
         <div className="card-top">
@@ -77,10 +82,6 @@ function Card( {id,title,descr,genre,stars,year,country,director,time,awards,ima
 
       <div className="card-bottom">
           <div className="card-bottom_block">
-          <div className="rating">
-            <span>{rating}</span>
-            <img src="./img/star.png" alt="star" />
-          </div>
           <div className="price">{price} BYN</div>
           </div>
         <button>Order it</button>

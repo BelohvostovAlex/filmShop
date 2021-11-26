@@ -5,7 +5,7 @@
     flex-flow: column;
     justify-content: space-between;
     width: 280px;
-    height: 690px;
+    height: 640px;
     margin-right: 20px;
     margin-bottom: 40px;
     position: relative;
@@ -23,12 +23,38 @@
     &:hover .card-inner{
         transform: translateY(-150px);
     }
-    
 
+    &-img {
+        position: relative;
+        width: 258px;
+        height: 352px;
+        img {
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .rating {
+            position: absolute;
+            top: 2%;
+            right: 5%;
+            display: flex;
+            align-items: center;
+            img {
+                width: 18px;
+                height: 20px;
+            }
+            span {
+                color: white;
+                font-size: 18px;
+                margin-right: 5px;
+            }
+        }
+    }
 
 
     &-inner {
-        min-height: 150px;
         background-color: black;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -38,24 +64,20 @@
         transition: .3s all ease-in-out;
         transition-delay: .2s;
 
-        img {
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+
     }
     &-top {
         background-color: black;
     }
     &-title {
-        font-size: 14px;
         text-align: center;
         border-bottom: 1px solid $main-color;
         padding-bottom: 5px;
         margin: 10px 0px;
+        h1 {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
     }
 
     &-genre {
@@ -64,6 +86,7 @@
         justify-content: flex-start;
         align-items: center;
         span {
+            font-size: 12px;
             text-transform: capitalize;
             border: 1px solid $grey-color;
             border-radius: 10px;
@@ -81,6 +104,8 @@
         margin-top: 5px;
         margin-bottom: 15px;
         color: $grey-color;
+        height: 90px;
+        overflow: auto;
     }
 
     &-text {
@@ -140,21 +165,8 @@
         z-index: 1;
         .card-bottom_block {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding-bottom: 5px;
-        }
-        .rating {
-            display: flex;
-            align-items: center;
-            img {
-                width: 20px;
-                height: 20px;
-            }
-            span {
-                font-size: 20px;
-                margin-right: 5px;
-            }
+            justify-content: center;
+            padding-bottom: 10px;
         }
         
         .price {
@@ -167,7 +179,7 @@
         background-color: $main-color;
         color: black;
         font-weight: 700;
-        font-size: 21px;
+        font-size: 18px;
         width: 100%;
         padding: 10px;
         border-radius: 10px;

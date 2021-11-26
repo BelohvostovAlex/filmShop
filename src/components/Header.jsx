@@ -1,33 +1,19 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
 
 function Header() {
     return (
-        <div>
-             <Menu>
-        <Menu.Item
-          name='movvieShop'
-        >
-          Movie Shop
-        </Menu.Item>
-
-
-        <Menu.Menu position='right'>
-          <Menu.Item
-            name='total'
-          >
-            Total Sum: 0 BYN
-          </Menu.Item>
-
-          <Menu.Item
-            name='cart'
-          >
-            Cart (<b>0</b>)
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
-    )
-        </div>
+        <header>
+          <div className="logo">
+            <img widt={40} height={40} src="/img/tv.png" alt="cinema" />
+            <p>Movie Shop</p>
+          </div>
+          <nav>
+            <ul>
+              <li>Total: 10 BYN</li>
+              <li>Cart (<b>0</b>)</li>
+            </ul>
+          </nav>
+        </header>
     )
 }
 

@@ -1,5 +1,7 @@
-@import './components/card';
 @import './variables';
+@import './components/card';
+@import './components/filter';
+@import './components/header';
 
 * {
     box-sizing: border-box;
@@ -18,10 +20,23 @@ button {
     font-size: inherit;
 }
 
+ul {
+    list-style-type: none;
+}
+
+h1,h2,h3,h4 {
+    margin: 0px;
+}
+
 .wrapper {
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
+}
+
+.sectionTitle {
+    color: white;
+    margin: 30px 0px 10px 0px;
 }
 
 .cards {

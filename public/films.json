@@ -3,7 +3,7 @@
         {
             "id": 0,
             "title": "Dune",
-            "descr": "Dune (titled onscreen as Dune: Part One) is a 2021 American epic science fiction film.",
+            "descr": "The film is the third adaptation of Dune following David Lynch's 1984 film, which was a critical and commercial failure, and John Harrison's 2000 miniseries. After an unsuccessful attempt by Paramount Pictures to produce a new adaptation, Legendary Entertainment acquired the Dune film and TV rights in 2016, with Villeneuve signing on as director in February 2017.",
             "genre": ["Thriller", "Fantastic"],
             "stars": ["Timoti Shalame", "Rebecca Ferguson","Oscar Aizek"],
             "year": 2021,
@@ -26,7 +26,7 @@
             "director": "Jason Reitman",
             "time": 120,
             "awards": "still doesnt have",
-            "image": "https://avatars.mds.yandex.net/i?id=418b072d89616f7e6d5bb30b439f0c62-5447131-images-thumbs&n=13",
+            "image": "https://www.film.ru/sites/default/files/movies/posters/7188425-875466.jpg",
             "price": 12,
             "rating": 6.9
         },

@@ -1,9 +1,14 @@
 import React from 'react';
 
-function Card( {id,title,descr,genre,stars,year,country,director,time,awards,image,price,rating} ) {
+import Button from './Button';
+
+function Card({item, addCard, cartItems} ) {
+  const {id,title,descr,genre,stars,year,country,director,time,awards,image,price,rating} = item
+
   const [activeInfo, setActiveInfo] = React.useState(true);
   const [activeActor, setActiveActor] = React.useState(false);
   const [activeAwards, setActiveAwards] = React.useState(false);
+  const addedCard = cartItems.reduce((acc,curr) => acc + (curr.id === item.id ? 1:0), 0)
 
   const handleInfo = () => {
     setActiveInfo(true);
@@ -48,10 +53,6 @@ function Card( {id,title,descr,genre,stars,year,country,director,time,awards,ima
         </div>
         </div>
 
-
-
-       
-
         <div className="card-accor">
           <div className="card-accor_block">
             <div className={`card-accor_title ${activeInfo ? 'card-accor_title-active' : ''}`}>
@@ -84,7 +85,7 @@ function Card( {id,title,descr,genre,stars,year,country,director,time,awards,ima
           <div className="card-bottom_block">
           <div className="price">{price} BYN</div>
           </div>
-        <button>Order it</button>
+        <Button handleAddToCart={() => addCard(item)}>Order it {addedCard > 0 ? '(' + addedCard + ')' : '' }</Button>
         </div>
       </div>
  

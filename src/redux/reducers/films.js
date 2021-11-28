@@ -1,7 +1,6 @@
 const initialState = {
     isReady: false,
-    items: null,
-    filterBy: null
+    items: null
 }
 
 function filmReducer (state = initialState, action) {
@@ -16,11 +15,6 @@ function filmReducer (state = initialState, action) {
             return {
                 ...state,
                 isReady: action.payload
-            }
-        case 'SET_FILTER':
-            return {
-                ...state,
-                filterBy: action.payload
             }
         default:
             return state

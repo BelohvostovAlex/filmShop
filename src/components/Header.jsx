@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Header() {
+function Header({total, items}) {
+  console.log(items)
     return (
         <header>
           <div className="logo">
@@ -9,8 +10,8 @@ function Header() {
           </div>
           <nav>
             <ul>
-              <li>Total: 10 BYN</li>
-              <li>Cart (<b>0</b>)</li>
+              <li>Total: {total} BYN</li>
+              <li>Cart (<b>{items.length}</b>)</li>
             </ul>
           </nav>
         </header>

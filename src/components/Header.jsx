@@ -1,7 +1,28 @@
 import React from 'react'
+import uniqBy from 'lodash/uniqBy'
 
-function Header({total, items}) {
-  console.log(items)
+function Header({total, items, onRemove}) {
+  React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick)
+
+}, [])
+
+  const [visible, setVisible] = React.useState(false)
+  const ulRef = React.useRef()
+  const cartItems = uniqBy(items, item => item.id)
+
+  const handleCartVisiblity = () => {
+    setVisible(!visible)
+  }
+
+  const handleOutsideClick = (e) => {
+    const path = e.path || (e.composedPath && e.composedPath());
+    if(!path.includes(ulRef.current)) {
+      setVisible(false)
+    }
+}
+
+
     return (
         <header>
           <div className="logo">
@@ -9,11 +30,48 @@ function Header({total, items}) {
             <p>Movie Shop</p>
           </div>
           <nav>
-            <ul>
+            <ul ref={(ref) => ulRef.current = ref}>
               <li>Total: {total} BYN</li>
-              <li>Cart (<b>{items.length}</b>)</li>
+              <li onClick={handleCartVisiblity}>Cart (<b>{items.length}</b>)</li>
             </ul>
+              {visible ?
+                          <div className="cart">
+                          <div className="cart__top">
+                            <h1>Added films</h1>
+                            <img 
+                            width={25}
+                             height={25} 
+                             src="/img/close.png" 
+                             alt="close" 
+                             onClick={handleCartVisiblity}/>
+                          </div>
+                          <div className="cart__inner">
+                          {cartItems.length > 0
+                        ? cartItems.map((item, index) => {
+                            return (
+                              <div className="cartItem" key={index}>
+                                <div className="cartItem__inner">
+                                  <div className="cartItem__inner-text">
+                                    <img width={40} height={55} src={item.image} alt={item.title} />
+                                    <h3 className="cartItem-title">{item.title}</h3>
+                                  </div>
+                                    <div className="cartItem__close">
+                                        <img 
+                                        src="/img/close2.png" 
+                                        alt="close" 
+                                        onClick={() => onRemove(item.id)}
+                                        />
+                                    </div>
+                                </div>
+                              </div>
+                            );
+                          })
+                        : 'The cart is empty :('}
+                          </div>
+                  </div> 
+                  : ''}
           </nav>
+          
         </header>
     )
 }

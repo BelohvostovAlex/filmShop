@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Filter({ filterItems, handleActive, searchVal, handleSearch, sortBy}) {
+function Filter({ filterItems, handleActive, searchVal, handleSearch}) {
 
 
     const [active, setActive] = React.useState(null)

@@ -57,11 +57,15 @@ function App () {
     dispatch(addToCart(obj))
   }
 
+const handleRemoveFromCart = (id) => {
+  dispatch(removeFromCart(id))
+}
+
 
 
     return (
      <div className="wrapper">
-       <Header total={totalPrice} items={items}/>
+       <Header total={totalPrice} items={items} onRemove={handleRemoveFromCart}/>
        <Filter filmsAll={filmsAll} filterItems={filterItems} handleActive={handleActive} handleSearch={handleSearch} sortBy={sortBy}/>
        <h1 className="sectionTitle">FILMS</h1>
        <div className="cards">

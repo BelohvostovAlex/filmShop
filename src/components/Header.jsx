@@ -1,7 +1,7 @@
 import React from 'react'
 import uniqBy from 'lodash/uniqBy'
 
-function Header({total, items, onRemove}) {
+const Header = React.memo(({total, items, onRemove}) => {
   React.useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick)
 
@@ -76,6 +76,6 @@ function Header({total, items, onRemove}) {
           
         </header>
     )
-}
+})
 
 export default Header

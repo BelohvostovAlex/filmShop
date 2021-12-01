@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Filter({ filterItems, handleActive, searchVal, handleSearch}) {
+const Filter = React.memo(({ filterItems, handleActive, searchVal, handleSearch}) => {
 
 
     const [active, setActive] = React.useState(null)
@@ -26,6 +26,6 @@ function Filter({ filterItems, handleActive, searchVal, handleSearch}) {
             </div>
         </div>
     )
-}
+})
 
 export default Filter

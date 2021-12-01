@@ -62,6 +62,7 @@ const handleRemoveFromCart = React.useCallback((id) => {
 },[])
 
 
+
     return (
      <div className="wrapper">
        <Header total={totalPrice} items={items} onRemove={handleRemoveFromCart}/>

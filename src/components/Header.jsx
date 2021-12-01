@@ -66,7 +66,9 @@ function Header({total, items, onRemove}) {
                               </div>
                             );
                           })
-                        : 'The cart is empty :('}
+                        : <div className="cart-empty">
+                          <img height="80" width="80" src="/img/box.png" alt="emptyCart" />
+                          </div>}
                           </div>
                   </div> 
                   : ''}

@@ -115,3 +115,15 @@ ul {
     align-items: center;
     min-width: 140px;
 }
+
+.cart-empty {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+@media screen and (max-device-width:800px) {
+    .cart {
+        height: 300px;
+    }
+}

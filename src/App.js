@@ -45,22 +45,21 @@ function App () {
     })
   }, [])
 
-  const handleActive = (type) => {
+  const handleActive = React.useCallback((type) => {
     dispatch(setFilter(type))
-  }
+  }, [])
 
-  const handleSearch = (val) => {
+  const handleSearch = React.useCallback((val) => {
     dispatch(setQuery(val))
-  }
+  }, [])
 
-  const handleAddToCart = (obj) => {
+  const handleAddToCart = React.useCallback((obj) => {
     dispatch(addToCart(obj))
-  }
+  }, [])
 
-const handleRemoveFromCart = (id) => {
+const handleRemoveFromCart = React.useCallback((id) => {
   dispatch(removeFromCart(id))
-}
-
+},[])
 
 
     return (

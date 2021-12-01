@@ -58,4 +58,33 @@
     }
 }
 
+@media screen and (max-device-width:768px) {
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filterWrapper {
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-device-width: 420px) {
+    nav {
+        ul {
+            li{ 
+                font-size: 12px;
+            }
+        }
+    }
+    .filterWrapper li {
+        font-size: 12px;
+    }
+
+    .search_block #search {
+        font-size: 12px;
+    }
+}
+
 

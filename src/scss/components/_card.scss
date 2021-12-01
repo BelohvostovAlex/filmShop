@@ -198,3 +198,36 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media screen and (max-device-width:1220px) {
+    .card {
+        width: 310px;
+        height: 640px;
+    }
+    .card-img {
+
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-device-width:768px) {
+    .card {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-device-width:720px) {
+    .card {
+        width: 280px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-device-width:600px) {
+    .card {
+        width: 320px;
+    }
+}
